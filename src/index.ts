@@ -1,6 +1,5 @@
 import { CIPHER, CipherOptions } from '@jihyunlab/web-crypto';
 import { EnvCipher } from './ciphers/env.cipher';
-import { EnvHelper } from './helpers/env.helper';
 
 export const Env = {
   createCipher: async (
@@ -12,4 +11,4 @@ export const Env = {
   },
 };
 
-export { CIPHER, CipherOptions, EnvCipher, EnvHelper };
+export { CIPHER, CipherOptions, EnvCipher };
