@@ -13,15 +13,9 @@ The encryption function is implemented with [@jihyunlab/web-crypto](https://www.
 npm i @jihyunlab/web-secret
 ```
 
-## Encryption key
-
-In web applications, since it's not possible to retrieve system or user environment variables, it's recommended to manage and input encryption keys separately.
-
-In cases where the JIHYUNLAB_SECRET_KEY environment variable cannot be retrieved, you must input the encryption key directly for decryption.
-
 ## Usage
 
-Decrypt using the separately managed encryption key that you input directly.
+Decrypt the .env key value by directly entering the separately managed encryption key.
 
 ```
 import { CIPHER, Env } from '@jihyunlab/web-secret';
@@ -29,6 +23,10 @@ import { CIPHER, Env } from '@jihyunlab/web-secret';
 const cipher = await Env.createCipher(CIPHER.AES_256_GCM, 'YourSecretKey');
 const value = await cipher.decrypt(process.env.ENV_KEY);
 ```
+
+## Encryption key
+
+In web applications, since it's not possible to retrieve system or user environment variables, it's recommended to manage and directly input encryption keys separately.
 
 ## Credits
 
